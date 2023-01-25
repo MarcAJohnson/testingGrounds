@@ -55,5 +55,5 @@ jobs:
 
       - name: Read artifact
         run: |
-          echo '{ "apiUrl": "www.testwebsite.com" }' > 'assets/config.json'
+          echo '{ "apiUrl": ${{ secrets.APP_URL_DEV }} }' > 'assets/config.json'
           cat assets/config.json
